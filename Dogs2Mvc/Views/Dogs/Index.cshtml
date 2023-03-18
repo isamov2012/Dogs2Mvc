@@ -1,0 +1,22 @@
+﻿@model Dogs2Mvc.Models.Dog[]
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+	<h3>Dogs</h3>
+	<ul>
+		@foreach (var item in Model)
+		{
+			<li>
+				@item.Name - @item.Age
+				<a href="/update/@item.Id"><input type="button" value="Edit" /></a>
+			</li>
+		}
+	</ul>
+	<a href="/Create"><h5>Create</h5></a>
+</body>
+</html> 
